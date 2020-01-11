@@ -1,8 +1,11 @@
 <div>
   <ol>
-    <li *ngFor='let quote of quotes'>
-      {{quote.text}}
-      <app-quote-details [quote]='quote'></app-quote-details>
-    </li>
+    <div *ngFor='let quote of quotes; let i = index'>
+      <li>{{quote.text}}<p>{{quote.author}}</p>
+        <p>Upvotes: {{quote.upvotes}} | Downvotes: {{quote.downvotes}}</p>
+      </li>
+      <button (click)='toggleDetails(i)'>More</button>
+        <app-quote-details *ngIf='quote.showSubmittedOn' [quote]='quote'></app-quote-details>
+    </div>
   </ol>
 </div>
