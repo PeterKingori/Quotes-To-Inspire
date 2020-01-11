@@ -1,5 +1,8 @@
 <div>
   <ol>
-    <li *ngFor='let quote of quotes'>{{quote.text}}{{'---'}}{{quote.author}}</li>
+    <li *ngFor='let quote of quotes'>
+      {{quote.text}}
+      <app-quote-details [quote]='quote'></app-quote-details>
+    </li>
   </ol>
 </div>
