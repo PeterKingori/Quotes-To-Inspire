@@ -1,4 +1,5 @@
 <div>
-  <p>Submitted by: {{quote.submittedBy}} on {{quote.submittedOn|date}}</p>
+  <p>Submitted by: {{quote.submittedBy}}</p>
+  <p>Posted {{quote.submittedOn|countDays}} day(s) ago on {{quote.submittedOn|date}}</p>
   <button (click)='deleteQuote(true)'>Delete Quote</button>
 </div>
