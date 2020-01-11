@@ -19,6 +19,13 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showSubmittedBy = !this.quotes[index].showSubmittedBy;
     this.quotes[index].showSubmittedOn = !this.quotes[index].showSubmittedOn;
   }
+
+  quoteDelete(isDelete, index) {
+    if (isDelete) {
+      this.quotes.splice(index, 1);
+    }
+  }
+
   constructor() { }
 
   ngOnInit() {

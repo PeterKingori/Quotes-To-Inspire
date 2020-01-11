@@ -4,8 +4,8 @@
       <li>{{quote.text}}<p>{{quote.author}}</p>
         <p>Upvotes: {{quote.upvotes}} | Downvotes: {{quote.downvotes}}</p>
       </li>
-      <button (click)='toggleDetails(i)'>More</button>
-        <app-quote-details *ngIf='quote.showSubmittedOn' [quote]='quote'></app-quote-details>
+      <button (click)='toggleDetails(i)'>More details</button>
+        <app-quote-details *ngIf='quote.showSubmittedOn' [quote]='quote' (isDelete)='quoteDelete($event, i)'></app-quote-details>
     </div>
   </ol>
 </div>
