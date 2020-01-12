@@ -37,6 +37,13 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].downvotes ++;
   }
 
+  addNewQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.submittedOn = new Date(quote.submittedOn);
+    this.quotes.push(quote);
+  }
+
   // get quotesOrder() {
   //   return this.quotes.sort(function (a,b) {
   //     return <any>b.upvotes - <any>a.downvotes;

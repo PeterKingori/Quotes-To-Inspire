@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h2>Submit a quote</h2>
   <hr>
-  <form #quoteForm='ngForm'>
+  <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
     <div class="form-group">
       <label for="quote">Quote</label>
       <textarea class="form-control" rows="4" id="quote" required [(ngModel)]="newQuote.text" name="text"
@@ -27,12 +27,13 @@
         </div>
     </div>
     <div class="form-group">
-      <label for="submittedBy">Submitted on:</label>
-      <input type="date" id="submittedOn" required class="ml-2 pl-1" required [(ngModel)]="newQuote.submittedOn"
+      <label for="submittedOn">Submitted on:</label>
+      <input type="date" id="submittedOn" class="ml-2 pl-1" required [(ngModel)]="newQuote.submittedOn"
         name="submittedOn" #submittedOn='ngModel'>
         <div [hidden]="submittedOn.valid || submittedOn.pristine" class="alert alert-danger">
           <p>A date is required</p>
         </div>
     </div>
+    <button type="submit" class="btn btn-warning">Submit quote</button>
   </form>
 </div>
