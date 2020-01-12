@@ -37,11 +37,11 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].downvotes ++;
   }
 
-  get quotesOrder() {
-    return this.quotes.sort(function (a,b) {
-      return <any>b.upvotes - <any>a.downvotes;
-    });
-  }
+  // get quotesOrder() {
+  //   return this.quotes.sort(function (a,b) {
+  //     return <any>b.upvotes - <any>a.downvotes;
+  //   });
+  // }
   
   constructor() { }
 

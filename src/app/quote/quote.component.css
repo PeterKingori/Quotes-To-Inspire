@@ -9,3 +9,7 @@
 #downvote:hover {
   color: red;
 }
+
+#quoteform {
+  background: url(../../assets/background.jpg);
+}
