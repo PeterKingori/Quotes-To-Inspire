@@ -1,11 +1,24 @@
-<div>
-  <ol>
-    <div *ngFor='let quote of quotes; let i = index'>
-      <li>{{quote.text}}<p>{{quote.author}}</p>
-        <p>Upvotes: {{quote.upvotes}} | Downvotes: {{quote.downvotes}}</p>
-      </li>
-      <button (click)='toggleDetails(i)'>More details</button>
-        <app-quote-details *ngIf='quote.showSubmittedOn' [quote]='quote' (isDelete)='quoteDelete($event, i)'></app-quote-details>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+
     </div>
-  </ol>
+    <div class="col-md-6">
+      <ol>
+        <div *ngFor='let quote of quotes; let i = index'>
+          <li>{{quote.text}}<p>{{quote.author}}</p>
+            <p> <i class="fas fa-thumbs-up" id="upvote" (click)="upvoteCount(i)"></i> {{quote.upvotes}} | <i class="fas fa-thumbs-down" id="downvote" (click)="downvoteCount(i)"></i>
+              {{quote.downvotes}}</p>
+            <button (click)='toggleDetails(i)' class="btn btn-primary">More details</button>
+            <app-quote-details *ngIf='quote.showSubmittedOn' [quote]='quote' (isDelete)='quoteDelete($event, i)'>
+            </app-quote-details>
+          </li>
+          
+        </div>
+      </ol>
+    </div>
+  </div>
 </div>

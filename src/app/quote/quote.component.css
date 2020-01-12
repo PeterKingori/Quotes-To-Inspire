@@ -1,0 +1,11 @@
+#upvote, #downvote {
+  font-size: 1.5rem;
+}
+
+#upvote:hover {
+  color: green;
+}
+
+#downvote:hover {
+  color: red;
+}
