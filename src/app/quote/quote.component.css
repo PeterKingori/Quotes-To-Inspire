@@ -1,4 +1,5 @@
-#upvote, #downvote {
+#upvote,
+#downvote {
   font-size: 1.5rem;
 }
 
@@ -12,4 +13,7 @@
 
 #quoteform {
   background: url(../../assets/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
