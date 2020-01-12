@@ -1,22 +1,38 @@
 <div class="container-fluid">
   <h2>Submit a quote</h2>
   <hr>
-  <form>
+  <form #quoteForm='ngForm'>
     <div class="form-group">
       <label for="quote">Quote</label>
-      <input type="text" class="form-control" id="quote" required>
+      <textarea class="form-control" rows="4" id="quote" required [(ngModel)]="newQuote.text" name="text"
+        #quote='ngModel'></textarea>
+      <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+        <p>A quote is required</p>
+      </div>
     </div>
     <div class="form-group">
       <label for="author">Author</label>
-      <textarea class="form-control" rows="4" id="author" required></textarea>
+      <input type="text" class="form-control" id="author" required [(ngModel)]="newQuote.author" name="author"
+        #author='ngModel'>
+      <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+        <p>An author is required</p>
+      </div>
     </div>
     <div class="form-group">
       <label for="submittedBy">Submitted by:</label>
-      <input type="text" class="form-control" id="submittedBy" required>
+      <input type="text" class="form-control" id="submittedBy" required [(ngModel)]="newQuote.submittedBy"
+        name="submittedBy" #submittedBy='ngModel'>
+        <div [hidden]="submittedBy.valid || submittedBy.pristine" class="alert alert-danger">
+          <p>You have to specify the person submitting the quote</p>
+        </div>
     </div>
     <div class="form-group">
-      <label for="submittedBy">Submitted on</label>
-      <input type="date" id="submittedOn" required class="ml-2 pl-1" required>
+      <label for="submittedBy">Submitted on:</label>
+      <input type="date" id="submittedOn" required class="ml-2 pl-1" required [(ngModel)]="newQuote.submittedOn"
+        name="submittedOn" #submittedOn='ngModel'>
+        <div [hidden]="submittedOn.valid || submittedOn.pristine" class="alert alert-danger">
+          <p>A date is required</p>
+        </div>
     </div>
   </form>
 </div>
