@@ -1,6 +1,6 @@
 # Quotes To Inspire
 ## Description
-This is a website that allows users to add quotes, vote on existing quotes and delete quotes.
+This is a website that allows users to add quotes, vote on existing quotes and delete quotes. The link to the live site is https://peterkingori.github.io/Quotes-To-Inspire/
 
 ## Technologies used
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
