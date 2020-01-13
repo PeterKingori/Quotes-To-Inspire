@@ -4,23 +4,19 @@
       <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
     </div>
     <div class="col-md-6">
-      <div class="card" id="topvoted" appHighlight>
-        <h3>Top voted quote</h3>        
-      </div>
-      <div>
-        <ol>
-          <div *ngFor='let quote of quotes; let i = index'>
-            <li>{{quote.text}}<p>{{quote.author}}</p>
-              <p> <i class="fas fa-thumbs-up" id="upvote" (click)="upvoteCount(i)"></i> {{quote.upvotes}} | <i
-                  class="fas fa-thumbs-down" id="downvote" (click)="downvoteCount(i)"></i>
-                {{quote.downvotes}}</p>
-              <button (click)='toggleDetails(i)' class="btn btn-outline-primary mb-2">More details</button>
-              <app-quote-details *ngIf='quote.showSubmittedOn' [quote]='quote' (isDelete)='quoteDelete($event, i)'>
-              </app-quote-details>
-            </li>
-          </div>
-        </ol>
-      </div>
+      <ol>
+        <div *ngFor='let quote of quotes; let i = index'>
+          <li>{{quote.text}}<p>{{quote.author}}</p>
+            <p> <i class="fas fa-thumbs-up" id="upvote" (click)="upvoteCount(i)"></i> {{quote.upvotes}} | <i
+                class="fas fa-thumbs-down" id="downvote" (click)="downvoteCount(i)"></i>
+              {{quote.downvotes}}</p>
+            <!-- <p quotesOrder() appHighlight>{{topvotes}}</p> -->
+            <button (click)='toggleDetails(i)' class="btn btn-outline-primary mb-2">More details</button>
+            <app-quote-details *ngIf='quote.showSubmittedOn' [quote]='quote' (isDelete)='quoteDelete($event, i)'>
+            </app-quote-details>
+          </li>
+        </div>
+      </ol>
     </div>
   </div>
 </div>

@@ -46,7 +46,8 @@ export class QuoteComponent implements OnInit {
 
   // get quotesOrder() {
   //   return this.quotes.sort(function (a,b) {
-  //     return <any>b.upvotes - <any>a.downvotes;
+  //     var topvotes = <any>b.upvotes - <any>a.downvotes;
+  //     return topvotes;
   //   });
   // }
   

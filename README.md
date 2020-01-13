@@ -1,4 +1,4 @@
-# QuotesToInspire
+# Quotes To Inspire
 ## Description
 This is a website that allows users to add quotes, vote on existing quotes and delete quotes.
 
@@ -7,10 +7,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 HTML, CSS, Bootstrap and Typescript were also used.
 
 ## Setup/Installation
-Fork this repository.
-Clone the repository to your machine.
-Open the folder in your text editor or navigate to the folder in your terminal and run code . or atom . etc to open with your text editor of choice.
-Run ng serve on the terminal to open a localhost server and view the website on the localhost port provided.
+1. Fork this repository.
+2. Clone the repository to your machine.
+3. Open the folder in your text editor or navigate to the folder in your terminal and run code . or atom . etc to open with your text editor of choice.
+4. Run ng serve on the terminal to open a localhost server and view the website on the localhost port provided.
 
 ## Author  and Contacts
 Peter Kingori Ndegwa
