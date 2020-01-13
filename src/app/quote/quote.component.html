@@ -4,12 +4,12 @@
       <app-quote-form (addQuote)='addNewQuote($event)'></app-quote-form>
     </div>
     <div class="col-md-6">
+      <div appHighlight class="card">
+        <h4>Top voted quote</h4>
+        {{quotes[0].text}}
+      </div>
       <ol class="mt-3">
-        <div *ngFor='let quote of quotes; let i = index'>
-          <div appHighlight class="card" *ngIf='quote.upvotes > 3'>
-            <h4>Top voted quote</h4>
-            {{quote.text}}
-          </div>
+        <div *ngFor='let quote of quotesOrder; let i = index'>          
           <li>{{quote.text}}<p>{{quote.author}}</p>
             <p><i class="fas fa-thumbs-up" id="upvote" (click)="upvoteCount(i)"></i>{{quote.upvotes}}
               <i class="fas fa-thumbs-down" id="downvote" (click)="downvoteCount(i)"></i>
