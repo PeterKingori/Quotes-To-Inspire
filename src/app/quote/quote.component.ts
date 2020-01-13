@@ -44,8 +44,8 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
-  // get quotesOrder() {
-  //   return this.quotes.sort(function (a,b) {
+  // quotesOrder() {
+  //   this.quotes.sort(function (a,b) {
   //     var topvotes = <any>b.upvotes - <any>a.downvotes;
   //     return topvotes;
   //   });
